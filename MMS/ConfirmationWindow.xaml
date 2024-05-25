@@ -1,0 +1,27 @@
+﻿<Window x:Class="MMS.ConfirmationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="You are about to leave."
+        Height="260"
+        Width="420"
+        Background="Transparent"
+        AllowsTransparency="true"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Icon="{x:Null}" 
+        WindowStartupLocation="CenterOwner">
+    <Border Background="DarkGoldenrod" CornerRadius="20" Width="400" Height="240" >
+        <Border.Effect>
+            <DropShadowEffect/>
+        </Border.Effect>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Image Height="83" Width="169" Source="/Image/mms-logo.png"/>
+        <TextBlock Text="Are you sure you want to exit?" Margin="10" HorizontalAlignment="Center" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Yes, quit" Margin="5" Click="YesButton_Click" Width="100" Background="DarkGoldenrod" Foreground="White" BorderBrush="{x:Null}" Height="23" Style="{StaticResource MergedConfirmationButtonStyle}"/>
+                <Button Content="No, cancel" Margin="5" IsCancel="True" Width="100" Background="#FFE9D1C5" BorderBrush="{x:Null}" Style="{StaticResource MergedConfirmationButtonStyle}"/>
+        </StackPanel>
+    </StackPanel>
+    </Border>
+</Window>
